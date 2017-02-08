@@ -62,6 +62,7 @@
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     console.log(audio);
     if(!audio) return; //stops the function from running
+    audio.currentTime = 0; //restarts the file every time you press the key
     audio.play();
   });
 </script>
